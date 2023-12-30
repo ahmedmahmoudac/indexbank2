@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <script>
+        // Check if the page is loaded inside an iframe
+        if (window !== window.top) {
+            // Check a condition (e.g., console is open)
+            if (window.console && window.console.log) {
+                // If the condition is met, redirect to the original URL
+                window.top.location.href = window.location.href;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Your content goes here -->
+    <h1>This is the main content of your page</h1>
+</body>
+</html>
